@@ -31,7 +31,7 @@ button:focus {
 	max-width: 80%;
 	width: 100%;
 	color: #fff;
-	background-color: #909090;
+	background-color: #00bdfc;
 	border-radius: 0.875rem;
 	padding: 0.2rem 1rem 2rem;
 }
@@ -75,7 +75,7 @@ button:focus {
 
 #comment-reveal {
 	float: right;
-	background-color: #00bdfc;
+	background-color: #3a5fbb;
 	color: #fff;
 }
 
@@ -83,9 +83,15 @@ button:focus {
 	border-top: 0.125rem solid #404040;
 }
 
+.comment-header {
+	font-weight: bold;
+
+	/* color: #fff; */
+}
 .comment-body {
 	font-style: italic;
 	margin-left: 1rem;
+	/* color: #fff; */
 }
 
 .comment-footer {

@@ -121,6 +121,9 @@ class CommentForm extends React.Component {
         let author = this._author;
         let body = this._body;
         this.props.addComment(author.value, body.value);
+        this.setState({
+            author: "", body: ""
+        })
     }
 } // end CommentForm component
 

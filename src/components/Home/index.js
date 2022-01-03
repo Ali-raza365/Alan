@@ -8,14 +8,18 @@ import { Redirect, useHistory } from "react-router";
 import { AuthContext } from "../../Context";
 import { auth } from "../../firebase";
 import Comments from "../AddComments/Comments";
+import CreatedBy from '../Created'
 
 const App = () => {
+
+
     const history = useHistory();
 
     const { user } = useContext(AuthContext);
     const [activeArticle, setActiveArticle] = useState(0);
     const [newsArticles, setNewsArticles] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
+    const [Created, setCreated] = useState(true);
     const classes = useStyles();
     const LogoutHandler = () => {
         localStorage.removeItem('user')
@@ -56,6 +60,15 @@ const App = () => {
             history.push("./signin");
         }
     }, []);
+    useEffect(() => {
+        setTimeout(() => {
+            setCreated(false)
+        }, 1000);
+    }, [])
+    if (Created) {
+        return <CreatedBy />
+    }
+
     return (
         <div style={{ position: "realitive", height: "100vh", overflowY: "scroll" }}>
             <div className="logoutCantainer">
